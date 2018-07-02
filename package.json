@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "mock-json-server",
   "main": "server/index.js",
-  "scripts": {},
+  "scripts": {
+    "dev":"node ./server/index.js"
+  },
   "author": "maria",
   "license": "MIT",
   "dependencies": {},
