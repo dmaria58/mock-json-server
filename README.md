@@ -1,22 +1,36 @@
 ## 模拟数据
 
-#mock 常用方法例举
+# mock 常用方法例举
+
 Random.boolean() 【随机返回 true / false】
+
 Random.natural(60, 100) 【大于60小于100自然数】
+
 Random.string('upper', 5) 【大写5位 例如（MGTOG）】
+
 Random.string('lower', 5) 【大写5位 例如（kbyjp）】
+
 Random.datetime('yyyy-MM-dd A HH:mm:ss') 【"1982-05-24 AM 11:47:34"】
+
 Random.date('yyyy-MM-dd') 【"1983-03-18"】
+
 Random.time('A HH:mm:ss')  【"AM 00:43:40"】
+
+
 具体文档地址 http://mockjs.com/examples.html
 
+
 #使用方法
+
 npm install  安装依赖包
+
 npm run dev 起服务 http://127.0.0.1:3003
 
 
 #实例
+
 可使用在线 https://getman.cn/ 测试服务情况
+
 1、post方式 http://127.0.0.1:3003/test/
    返回数据 
     {
@@ -117,6 +131,7 @@ npm run dev 起服务 http://127.0.0.1:3003
     "row": {},
     "note": ""
   }
+  
 3、post 方式 http://127.0.0.1:3003/error/
   返回
   {
