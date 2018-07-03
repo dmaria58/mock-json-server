@@ -2,9 +2,9 @@
   "name": "mock-json-server",
   "version": "1.0.0",
   "description": "mock-json-server",
-  "main": "server/index.js",
+  "main": "/servers/server.js",
   "scripts": {
-    "dev":"node ./server/index.js"
+    "dev":"node ./servers/server.js"
   },
   "author": "maria",
   "license": "MIT",
