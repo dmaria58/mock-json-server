@@ -20,14 +20,14 @@ Random.time('A HH:mm:ss')  【"AM 00:43:40"】
 具体文档地址 http://mockjs.com/examples.html
 
 
-#使用方法
+# 使用方法
 
 npm install  安装依赖包
 
 npm run dev 起服务 http://127.0.0.1:3003
 
 
-#实例
+# 实例
 
 可使用在线 https://getman.cn/ 测试服务情况
 
