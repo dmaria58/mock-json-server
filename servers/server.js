@@ -1,18 +1,16 @@
 const path = require('path');
 const jsonServer = require('json-server');
-
+const index_file = require('./db/index.js')
 const config = {
   SERVER:"127.0.0.1",  
   PORT: 3003,
-  DB_FILE:"db.json"
 };
 const ip = config.SERVER;
 const port = config.PORT;
-const db_file = config.DB_FILE;
-
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, config.DB_FILE));
+const router = jsonServer.router();
 const middlewares = jsonServer.defaults();
+
 
 
 
@@ -24,14 +22,10 @@ server.use((req, res, next) => {
  next();
 })
 router.render = (req, res) => {
-	console.log(res);
 	if(req.method == "POST"){
-		res.jsonp({
-			code: 0,
-			body: {result:"success"}
-		})
+		res.jsonp(index_file[req.url]);
 	}
-	else{
+	else if(req.method == "GET"){
 		res.jsonp({
 			code: 0,
 			body: res.locals.data
@@ -39,8 +33,8 @@ router.render = (req, res) => {
 	}
 }
 server.use("/api",router);
-
 server.use(router);
+
 server.listen({
 	host: ip,
 	port: port,
